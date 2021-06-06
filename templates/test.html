@@ -1,0 +1,16 @@
+
+{% extends 'layout.html' %}
+{% block content %}
+    <h1>{{ message }}</h1>
+    <p></p>
+    {% for test in tests %}
+    <table>
+            <tr>
+                <td>問{% print(tests.index(test)) %}　</td><td><a href="show/{{ test.id }}">{{ test.eigo }} </a></td>
+            </tr>
+    
+    {% endfor %}
+    </table>
+    <p><a href='/'>トップへ</a></p>
+
+{% endblock %}

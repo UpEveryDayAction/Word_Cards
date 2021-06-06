@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1>{{ message }}</h1>
+    <form action="/update/{{ post.id }}" method="post">
+        <label for="eigo">英語 </label>
+        <input type="text" name="eigo" value="">
+        
+        <label for="nihongo">日本語 </label>
+        <input type="text" name="nihongo" value="">
+        <p></p>
+        <button type="submit">保存する</button>
+        <a href='/show/{{ post.id }}'>キャンセル</a>
+    </form>
+{% endblock %}

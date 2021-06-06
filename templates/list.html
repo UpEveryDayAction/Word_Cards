@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <h1>{{ message }}</h1>
+
+    <table>
+        <tr><th>英語</th><th>日本語</th><th></th></tr>
+        {% for post in posts %}
+            <tr>
+                <td>{{ post.eigo }}</td><td>{{ post.nihongo }}</td><td><button href="show/{{ post.id }}">編集する</button></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <p><a href="/new">新規メモ</a></p>
+    <p><a href="/test">テストする</a></td></p>
+
+
+{% endblock %}
