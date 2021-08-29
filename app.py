@@ -1,3 +1,4 @@
+
 from flask_migrate import Migrate
 from flask import Flask, request, render_template
 from flask_sqlalchemy import SQLAlchemy
@@ -5,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 import random
 
 app = Flask(__name__)
-#Markdown(app)
+#アプリの実行はflask runでおこなってください
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///memo.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -107,4 +108,6 @@ def do_test():
             break;
 
     return render_template('test.html', message = message, tests = tests)
+
+
 
